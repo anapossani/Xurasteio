@@ -1,0 +1,53 @@
+<div class="main-container">
+  
+  <div class="content-wrapper">
+    <header>
+      <h1 class="titulo-principal">
+        <span class="xura">XURASTEIO</span>
+        <span class="go">XURAGO</span>
+      </h1>
+      <p class="subtitulo">O Oráculo da Gambiarra Emocional</p>
+    </header>
+
+    <div class="input-area">
+      <input 
+        type="text" 
+        [(ngModel)]="perguntaUsuario" 
+        placeholder="Digita sua dúvida cruel aqui..."
+        [disabled]="carregando"
+        (keyup.enter)="descobrirDestino()">
+      
+      <button 
+        class="magic-button" 
+        (click)="descobrirDestino()" 
+        [disabled]="carregando || !perguntaUsuario.trim()">
+        
+        <span *ngIf="!carregando">CONSULTAR 🔮</span>
+        <span *ngIf="carregando">PERAÊ... ⏳</span>
+      </button>
+    </div>
+
+    <div *ngIf="resultado" class="result-card fade-in">
+      
+      <div class="card-header" 
+           [class.bg-green]="resultado.resultado === 'XURAGO'"
+           [class.bg-red]="resultado.resultado === 'XURASTEI'">
+        <h2>{{ resultado.resultado }}!</h2>
+      </div>
+
+      <div class="card-body">
+        <p class="mensagem">"{{ resultado.mensagem }}"</p>
+        
+        <div class="vibe-badge">
+          <span>Vibe: {{ resultado.vibe }}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <small>Feito com ⚡ e indecisão.</small>
+    </footer>
+  </div>
+
+</div>
