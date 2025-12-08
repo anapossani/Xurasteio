@@ -1,0 +1,32 @@
+# Dependências do projeto (O PESADÃO)
+/node_modules
+
+# Arquivos de Build (O que o Angular gera)
+/dist
+/out-tsc
+/bazel-out
+
+# Configurações locais da Vercel
+.vercel
+/.vercel
+
+# Cache do Angular
+/.angular
+
+# Configurações de IDE (VS Code, etc)
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs de erro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de Sistema Operacional (Lixo do Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente (Se tiver senhas no futuro)
+.env
