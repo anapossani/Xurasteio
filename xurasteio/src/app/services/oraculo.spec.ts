@@ -1,13 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Oraculo } from './oraculo';
+import { OraculoService } from './oraculo';
+
 
 describe('Oraculo', () => {
-  let service: Oraculo;
+  let service: OraculoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Oraculo);
+    service = TestBed.inject(OraculoService);
   });
 
   it('should be created', () => {
